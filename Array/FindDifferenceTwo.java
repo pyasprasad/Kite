@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
-public class PairsArray {
+public class FindDifferenceTwo {
 
-    public static void pairsArray(int arr[]) {
+    public static void findDifferenceTwo(int arr[], int k) {
         for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                System.out.println(arr[i] + " " + arr[j]);
+            for (int j = i; j < arr.length; j++) {
+                if ((Math.abs(arr[i] - arr[j])) == k) {
+                    System.out.println(arr[i] + " " + arr[j]);
+                }
             }
         }
     }
@@ -17,6 +19,7 @@ public class PairsArray {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        pairsArray(arr);
+        int k = sc.nextInt();
+        findDifferenceTwo(arr, k);
     }
 }

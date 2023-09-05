@@ -1,12 +1,16 @@
 import java.util.Scanner;
 
-public class PairsArray {
+public class GreaterAtRight {
 
-    public static void pairsArray(int arr[]) {
+    public static void greaterAtRight(int arr[]) {
+        int count = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
-                System.out.println(arr[i] + " " + arr[j]);
+                if (arr[i] < arr[j])
+                    count++;
             }
+            System.out.print(count + " ");
+            count = 0;
         }
     }
 
@@ -17,6 +21,6 @@ public class PairsArray {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        pairsArray(arr);
+        greaterAtRight(arr);
     }
 }

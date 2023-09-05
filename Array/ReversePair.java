@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class PairsArray {
+public class ReversePair {
 
-    public static void pairsArray(int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
+    public static void reversePair(int arr[]) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            for (int j = arr.length - 1; j >= 0; j--) {
                 System.out.println(arr[i] + " " + arr[j]);
             }
         }
@@ -17,6 +17,6 @@ public class PairsArray {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        pairsArray(arr);
+        reversePair(arr);
     }
 }
